@@ -1,7 +1,10 @@
 
+
 #include <iostream>
 #include <string>
 #include <iomanip>
+#include <limits>
+
 using namespace std;
 
 // AI Financial Assistant
@@ -45,11 +48,37 @@ int main()
     cout << "     AI FINANCIAL ASSISTANT\n";
     cout << "=================================\n";
 
+   // Input validation for name
+do
+{
     cout << "Enter your name: ";
     getline(cin, name);
 
+    if (name.empty())
+    {
+        cout << "Name cannot be empty. Please try again.\n";
+    }
+
+} while (name.empty());
+
+// Input validation for account balance
+// Input validation for account balance
+while (true)
+{
     cout << "Enter your account balance: $";
-    cin >> balance;
+
+    if (cin >> balance)
+    {
+        break;
+    }
+    else
+    {
+        cout << "Invalid input. Please enter a valid number.\n";
+
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+}
 
     cout << fixed << setprecision(2);
 

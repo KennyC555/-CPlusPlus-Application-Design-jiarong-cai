@@ -31,8 +31,14 @@ The function analyzes the account balance using conditional statements and provi
 This project uses a rule-based Mock AI instead of an external AI service.
 
 A future version could connect to a real AI API.
+## 5. Input Validation
 
-## 5. Testing
+The application includes input validation to prevent invalid user entries.
+
+- Name validation: The program does not allow an empty name.
+- Balance validation: The program checks whether the account balance is a valid number.
+- Invalid input displays an error message and asks the user to try again.
+## 6. Testing
 
 | Test | Balance | Expected Result |
 |---|---:|---|
@@ -43,7 +49,7 @@ A future version could connect to a real AI API.
 
 All four tests passed successfully.
 
-## 6. Technologies Used
+## 7. Technologies Used
 - C++
 - Functions
 - Conditional Statements
@@ -51,7 +57,7 @@ All four tests passed successfully.
 - User Input and Output
 - GCC Compiler
 
-## 7. Conclusion
+## 8. Conclusion
 This project demonstrates how AI-inspired functionality can expand a traditional C++ banking application.
 
 The Mock AI feature provides financial recommendations based on user account data.
